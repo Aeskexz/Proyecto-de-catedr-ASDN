@@ -1,0 +1,329 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-body: #f4f7fc;
+  --bg-card: #ffffff;
+  --text-primary: #1a2c3e;
+  --text-secondary: #4a627a;
+  --border-light: #e2e8f0;
+  --barca-blue: #004d98;
+  --barca-red: #a50044;
+  --barca-gold: #edbb00;
+  --shadow-sm: 0 8px 20px rgba(0,0,0,0.05);
+  --shadow-md: 0 12px 28px rgba(0,0,0,0.08);
+  --radius: 20px;
+  --radius-sm: 12px;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: var(--bg-body);
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+/* HEADER */
+header {
+  background: white;
+  border-bottom: 1px solid var(--border-light);
+  padding: 1.2rem 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo-icon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--barca-blue), var(--barca-red));
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.logo-text .facultad {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-secondary);
+}
+
+.logo-text h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--barca-blue);
+  margin-top: 4px;
+}
+
+.escudo-header {
+  height: 56px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* MAIN */
+.main-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.team-section {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: 1.5rem;
+  transition: box-shadow 0.2s;
+}
+
+.team-card-single {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.team-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--barca-gold);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.team-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-info h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.team-info h2 span {
+  font-weight: 500;
+  font-size: 1rem;
+  background: #eef2ff;
+  padding: 4px 12px;
+  border-radius: 40px;
+  color: var(--barca-blue);
+}
+
+.team-info p {
+  color: var(--text-secondary);
+  margin-top: 6px;
+}
+
+.team-escudo-mini img {
+  height: 70px;
+  width: auto;
+  opacity: 0.9;
+}
+
+/* FORM SECTION */
+.form-section, .table-section {
+  background: var(--bg-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: 1.8rem;
+}
+
+.section-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--barca-blue);
+  border-left: 5px solid var(--barca-red);
+  padding-left: 1rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+  margin-bottom: 1.8rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.input-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 0.3px;
+}
+
+.input-group input {
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: 0.2s;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: var(--barca-blue);
+  box-shadow: 0 0 0 3px rgba(0,77,152,0.1);
+}
+
+.btn-add {
+  background: linear-gradient(110deg, var(--barca-blue), #002b5c);
+  color: white;
+  border: none;
+  padding: 0.9rem 1.8rem;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.1s, box-shadow 0.2s;
+  box-shadow: 0 4px 10px rgba(0,77,152,0.2);
+}
+
+.btn-add:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 20px rgba(0,77,152,0.25);
+}
+
+.form-msg {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+}
+
+.success { color: #15803d; background: #e0f2e7; padding: 0.5rem; border-radius: 12px; }
+.error { color: #b91c1c; background: #fee2e2; padding: 0.5rem; border-radius: 12px; }
+
+/* TABLA */
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.btn-refresh {
+  background: transparent;
+  border: 1px solid var(--border-light);
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-refresh:hover {
+  background: #f1f5f9;
+  border-color: var(--barca-blue);
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+th {
+  text-align: left;
+  padding: 1rem 0.8rem;
+  background: #f8fafc;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+td {
+  padding: 0.9rem 0.8rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.btn-delete {
+  background: none;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+  padding: 0.4rem 1rem;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-delete:hover {
+  background: #fee2e2;
+  border-color: #b91c1c;
+}
+
+.loading-msg, .empty-msg {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-secondary);
+}
+
+footer {
+  text-align: center;
+  padding: 1.8rem;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  border-top: 1px solid var(--border-light);
+  margin-top: 1rem;
+}
+
+@media (max-width: 700px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .team-card-single {
+    flex-direction: column;
+    text-align: center;
+  }
+  .main-container {
+    padding: 0 1rem;
+  }
+  .table-header {
+    flex-direction: column;
+    align-items: start;
+    gap: 0.8rem;
+  }
+}

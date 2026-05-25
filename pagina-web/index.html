@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestión de Estudiantes | Fernando · UDB</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="logo-area">
+        <div class="logo-icon">UDB</div>
+        <div class="logo-text">
+          <span class="facultad">Facultad de Ingeniería · ASN441</span>
+          <h1>Gestión de Estudiantes</h1>
+        </div>
+      </div>
+      <img src="imagenes/barcelona.png" alt="Escudo FC Barcelona" class="escudo-header" />
+    </div>
+  </header>
+
+  <main class="main-container">
+
+    <section class="team-section">
+      <div class="team-card-single">
+        <div class="team-photo">
+          <img src="imagenes/integrante.jpg" alt="Fernando" />
+        </div>
+        <div class="team-info">
+          <h2>Fernando <span>Estudiante</span></h2>
+          <p>Único integrante del proyecto</p>
+        </div>
+        <div class="team-escudo-mini">
+          <img src="imagenes/barcelona.png" alt="Escudo" />
+        </div>
+      </div>
+    </section>
+    <section class="form-section">
+      <h2 class="section-title"> Agregar estudiante</h2>
+      <div class="form-grid">
+        <div class="input-group">
+          <label>Nombres</label>
+          <input type="text" id="nombres" " />
+        </div>
+        <div class="input-group">
+          <label>Apellidos</label>
+          <input type="text" id="apellidos"  />
+        </div>
+        <div class="input-group">
+          <label>Número de Carnet</label>
+          <input type="text" id="carnet"  />
+        </div>
+        <div class="input-group">
+          <label>Edad</label>
+          <input type="number" id="edad"  />
+        </div>
+      </div>
+      <button class="btn-add" onclick="createStudent()">+ Agregar estudiante</button>
+      <div id="form-msg" class="form-msg"></div>
+    </section>
+
+    <section class="table-section">
+      <div class="table-header">
+        <h2 class="section-title">Lista de estudiantes</h2>
+        <button class="btn-refresh" onclick="loadStudents()">⟳ Actualizar</button>
+      </div>
+      <div id="loading" class="loading-msg">Cargando estudiantes...</div>
+      <div class="table-wrapper">
+        <table id="students-table">
+          <thead>
+            <tr><th>ID</th><th>Nombres</th><th>Apellidos</th><th>Carnet</th><th>Edad</th><th>Acción</th></tr>
+          </thead>
+          <tbody id="table-body"></tbody>
+        </table>
+      </div>
+      <p id="empty-msg" class="empty-msg" style="display:none">No hay estudiantes registrados.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Universidad Don Bosco · Facultad de Ingeniería · ASN441 · 2026</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
