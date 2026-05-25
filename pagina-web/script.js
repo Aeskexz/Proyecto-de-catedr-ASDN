@@ -1,12 +1,5 @@
-// =============================================
-//  CONFIGURACIÓN — cambia esta URL cuando
-//  despliegues la API en Azure App Service
-// =============================================
-const API_BASE = "http://localhost:5000";
+const API_BASE = "https://api-estudiantes-fernando-hvg0e4a3caatf0hp.eastus-01.azurewebsites.net";
 
-// =============================================
-//  CARGAR ESTUDIANTES (GET)
-// =============================================
 async function loadStudents() {
   const loading  = document.getElementById("loading");
   const emptyMsg = document.getElementById("empty-msg");
