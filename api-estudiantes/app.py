@@ -11,8 +11,12 @@ CORS(app)
 
 @app.route("/")
 def home():
+    drivers = [x for x in pyodbc.drivers()]
+    conn_str = os.environ.get("DB_CONNECTION_STRING", "NO ENCONTRADA")
     return jsonify({
-        "mensaje": "API funcionando correctamente en Azure"
+        "mensaje": "API funcionando",
+        "drivers_disponibles": drivers,
+        "conn_str_presente": conn_str != "NO ENCONTRADA"
     })
 
 # Configuración de conexión desde variable de entorno
