@@ -11,9 +11,9 @@ CORS(app)
 
 @app.route("/")
 def home():
-    return {
+    return jsonify({
         "mensaje": "API funcionando correctamente en Azure"
-    }
+    })
 
 # Configuración de conexión desde variable de entorno
 conn_str = os.environ.get("DB_CONNECTION_STRING")
