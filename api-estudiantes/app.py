@@ -9,6 +9,12 @@ load_dotenv()  # Carga las variables del archivo .env
 app = Flask(__name__)
 CORS(app)
 
+@app.route("/")
+def home():
+    return {
+        "mensaje": "API funcionando correctamente en Azure"
+    }
+
 # Configuración de conexión desde variable de entorno
 conn_str = os.environ.get("DB_CONNECTION_STRING")
 
